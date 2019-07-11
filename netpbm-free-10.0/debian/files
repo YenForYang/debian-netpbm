@@ -1,0 +1,7 @@
+libnetpbm10-dbgsym_10.0-15.3_amd64.deb debug optional automatic=yes
+libnetpbm10-dev_10.0-15.3_amd64.deb libdevel optional
+libnetpbm10_10.0-15.3_amd64.deb libs optional
+libnetpbm9-dbgsym_10.0-15.3_amd64.deb debug optional automatic=yes
+libnetpbm9-dev_10.0-15.3_amd64.deb libdevel optional
+libnetpbm9_10.0-15.3_amd64.deb libs optional
+netpbm_10.0-15.3_amd64.deb graphics optional

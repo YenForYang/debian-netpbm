@@ -1,0 +1,12 @@
+Package: libnetpbm9-dbgsym
+Source: netpbm-free
+Version: 2:10.0-15.3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Andreas Barth <aba@not.so.argh.org>
+Installed-Size: 177
+Depends: libnetpbm9 (= 2:10.0-15.3)
+Section: debug
+Priority: optional
+Description: debug symbols for libnetpbm9
+Build-Ids: 0f157e5097d3b663cbdba2a19c4f317c210abb3e 212ac4ead39cff42cec78e3f029540433307175a 82f4662d4c18188d82e03b58924ccd21817ab910 cfefe53b072a3ac1962655a210fd66829343c53f

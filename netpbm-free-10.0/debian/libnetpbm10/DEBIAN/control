@@ -1,0 +1,12 @@
+Package: libnetpbm10
+Source: netpbm-free
+Version: 2:10.0-15.3
+Architecture: amd64
+Maintainer: Andreas Barth <aba@not.so.argh.org>
+Installed-Size: 207
+Depends: libc6 (>= 2.7)
+Section: libs
+Priority: optional
+Homepage: http://netpbm.alioth.debian.org
+Description: Graphics conversion tools shared libraries
+ This package contains the shared libraries used by netpbm.

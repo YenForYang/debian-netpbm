@@ -1,0 +1,391 @@
+lib/shared/libppm1.o: ppm/libppm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm1.o: ppm/libppm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppm1.o
+lib/static/libnetpbm.a: lib/static/libppm1.o
+lib/shared/libppm.so.9.25: lib/shared/libppm1.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppm1.o
+lib/shared/libppm2.o: ppm/libppm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm2.o: ppm/libppm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppm2.o
+lib/static/libnetpbm.a: lib/static/libppm2.o
+lib/shared/libppm.so.9.25: lib/shared/libppm2.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppm2.o
+lib/shared/libppmcmap.o: ppm/libppmcmap.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppmcmap.o: ppm/libppmcmap.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppmcmap.o
+lib/static/libnetpbm.a: lib/static/libppmcmap.o
+lib/shared/libppm.so.9.25: lib/shared/libppmcmap.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppmcmap.o
+lib/shared/libppm4.o: ppm/libppm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm4.o: ppm/libppm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppm4.o
+lib/static/libnetpbm.a: lib/static/libppm4.o
+lib/shared/libppm.so.9.25: lib/shared/libppm4.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppm4.o
+lib/shared/libppm5.o: ppm/libppm5.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm5.o: ppm/libppm5.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppm5.o
+lib/static/libnetpbm.a: lib/static/libppm5.o
+lib/shared/libppm.so.9.25: lib/shared/libppm5.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppm5.o
+lib/shared/libppmfloyd.o: ppm/libppmfloyd.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppmfloyd.o: ppm/libppmfloyd.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libppm.a: lib/static/libppmfloyd.o
+lib/static/libnetpbm.a: lib/static/libppmfloyd.o
+lib/shared/libppm.so.9.25: lib/shared/libppmfloyd.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libppmfloyd.o
+lib/shared/libpm.o: pbm/libpm.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpm.o: pbm/libpm.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpm.o
+lib/static/libnetpbm.a: lib/static/libpm.o
+lib/shared/libpbm.so.9.25: lib/shared/libpm.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpm.o
+lib/shared/libpbm1.o: pbm/libpbm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm1.o: pbm/libpbm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpbm1.o
+lib/static/libnetpbm.a: lib/static/libpbm1.o
+lib/shared/libpbm.so.9.25: lib/shared/libpbm1.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpbm1.o
+lib/shared/libpbm2.o: pbm/libpbm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm2.o: pbm/libpbm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpbm2.o
+lib/static/libnetpbm.a: lib/static/libpbm2.o
+lib/shared/libpbm.so.9.25: lib/shared/libpbm2.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpbm2.o
+lib/shared/libpbm3.o: pbm/libpbm3.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm3.o: pbm/libpbm3.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpbm3.o
+lib/static/libnetpbm.a: lib/static/libpbm3.o
+lib/shared/libpbm.so.9.25: lib/shared/libpbm3.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpbm3.o
+lib/shared/libpbm4.o: pbm/libpbm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm4.o: pbm/libpbm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpbm4.o
+lib/static/libnetpbm.a: lib/static/libpbm4.o
+lib/shared/libpbm.so.9.25: lib/shared/libpbm4.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpbm4.o
+lib/shared/libpbm5.o: pbm/libpbm5.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm5.o: pbm/libpbm5.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/libpbm5.o
+lib/static/libnetpbm.a: lib/static/libpbm5.o
+lib/shared/libpbm.so.9.25: lib/shared/libpbm5.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpbm5.o
+lib/shared/bitio.o: pbm/bitio.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/bitio.o: pbm/bitio.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbm.a: lib/static/bitio.o
+lib/static/libnetpbm.a: lib/static/bitio.o
+lib/shared/libpbm.so.9.25: lib/shared/bitio.o
+lib/shared/libnetpbm.so.10.0: lib/shared/bitio.o
+lib/shared/libpgm1.o: pgm/libpgm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpgm1.o: pgm/libpgm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpgm.a: lib/static/libpgm1.o
+lib/static/libnetpbm.a: lib/static/libpgm1.o
+lib/shared/libpgm.so.9.19: lib/shared/libpgm1.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpgm1.o
+lib/shared/libpgm2.o: pgm/libpgm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpgm2.o: pgm/libpgm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpgm.a: lib/static/libpgm2.o
+lib/static/libnetpbm.a: lib/static/libpgm2.o
+lib/shared/libpgm.so.9.19: lib/shared/libpgm2.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpgm2.o
+lib/shared/libpnm1.o: pnm/libpnm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm1.o: pnm/libpnm1.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpnm1.o
+lib/static/libnetpbm.a: lib/static/libpnm1.o
+lib/shared/libpnm.so.9.25: lib/shared/libpnm1.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpnm1.o
+lib/shared/libpnm2.o: pnm/libpnm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm2.o: pnm/libpnm2.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpnm2.o
+lib/static/libnetpbm.a: lib/static/libpnm2.o
+lib/shared/libpnm.so.9.25: lib/shared/libpnm2.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpnm2.o
+lib/shared/libpnm3.o: pnm/libpnm3.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm3.o: pnm/libpnm3.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpnm3.o
+lib/static/libnetpbm.a: lib/static/libpnm3.o
+lib/shared/libpnm.so.9.25: lib/shared/libpnm3.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpnm3.o
+lib/shared/libpnm4.o: pnm/libpnm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm4.o: pnm/libpnm4.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpnm4.o
+lib/static/libnetpbm.a: lib/static/libpnm4.o
+lib/shared/libpnm.so.9.25: lib/shared/libpnm4.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpnm4.o
+lib/shared/libpam.o: pnm/libpam.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpam.o: pnm/libpam.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpam.o
+lib/static/libnetpbm.a: lib/static/libpam.o
+lib/shared/libpnm.so.9.25: lib/shared/libpam.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpam.o
+lib/shared/libpammap.o: pnm/libpammap.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpammap.o: pnm/libpammap.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpnm.a: lib/static/libpammap.o
+lib/static/libnetpbm.a: lib/static/libpammap.o
+lib/shared/libpnm.so.9.25: lib/shared/libpammap.o
+lib/shared/libnetpbm.so.10.0: lib/shared/libpammap.o
+lib/static/libpbm.a: lib/static/shhopt.o
+lib/static/libnetpbm.a: lib/static/shhopt.o
+lib/shared/libpbm.so.9.25: lib/shared/shhopt.o
+lib/shared/libnetpbm.so.10.0: lib/shared/shhopt.o
+lib/shared/shhopt.o: shhopt/shhopt.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -fPIC -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/shhopt.o: shhopt/shhopt.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) -I $(SRCDIR)/include/ -I $(SRCDIR)/shhopt/ $(CFLAGS) -D_REENTRANT $(CDEBUG) -o $@ $<
+
+lib/static/libpbmvms.o: pbm/libpbmvms.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/static
+	$(CC) -c $(INCLUDE) $(CFLAGS) $(CDEBUG) -o $@ $<
+
+lib/shared/libpbmvms.o: pbm/libpbmvms.c shhopt/netpbm-shhopt.h
+	mkdir -p lib/shared
+	$(CC) -c $(INCLUDE) $(CFLAGS) $(CDEBUG) -o $@ $<
+
+LIBOBJECT_ppm := libppm1.o libppm2.o libppmcmap.o libppm4.o libppm5.o libppmfloyd.o
+LIBOBJECT_pbm := libpm.o libpbm1.o libpbm2.o libpbm3.o libpbm4.o libpbm5.o bitio.o
+LIBOBJECT_pgm := libpgm1.o libpgm2.o
+LIBOBJECT_pnm := libpnm1.o libpnm2.o libpnm3.o libpnm4.o libpam.o libpammap.o
+ifneq (${VMS}x,x)
+LIBOBJECT_pbm += libpbmvms.o
+
+lib/static/libpbm.a: lib/static/libpbmvms.o
+
+lib/shared/libpbm.a: lib/shared/libpbmvms.o
+
+endif
+
+lib/static/lib%.a:
+	ar cq $@ $+
+	ranlib $@
+
+lib/static/libnetpbm.a:
+	ar cq $@ $+
+	ranlib $@
+
+lib/shared/libppm.so.9.25: lib/shared/libpgm.so
+
+lib/shared/libppm.so.9.25:
+	$(LD) $(LDSHLIB) -Llib/shared -o $@ $+ -lpbm -lpgm -lc $(CDEBUG)
+
+lib/shared/libppm.so.9.25: SONAME := libppm.so.9
+lib/shared/libppm.so.9: lib/shared/libppm.so.9.25
+	ln -sf $$(basename $+) $@
+
+lib/shared/libppm.so: lib/shared/libppm.so.9
+	ln -sf $$(basename $+) $@
+
+install.lib.old-shared.lib:: lib/shared/libppm.so.9.25
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libppm.so.9.25
+install.lib.old-shared.lib::
+	$(SYMLINK) libppm.so.9.25 $(INSTALLSTATICLIBS)/libppm.so.9
+install.lib.old-shared.devel::
+	$(SYMLINK) libppm.so.9 $(INSTALLSTATICLIBS)/libppm.so
+install.lib.old-static:: lib/static/libppm.a
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libppm.a
+lib/shared/libpbm.so.9.25: 
+
+lib/shared/libpbm.so.9.25:
+	$(LD) $(LDSHLIB) -Llib/shared -o $@ $+  -lc $(CDEBUG)
+
+lib/shared/libpbm.so.9.25: SONAME := libpbm.so.9
+lib/shared/libpbm.so.9: lib/shared/libpbm.so.9.25
+	ln -sf $$(basename $+) $@
+
+lib/shared/libpbm.so: lib/shared/libpbm.so.9
+	ln -sf $$(basename $+) $@
+
+install.lib.old-shared.lib:: lib/shared/libpbm.so.9.25
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpbm.so.9.25
+install.lib.old-shared.lib::
+	$(SYMLINK) libpbm.so.9.25 $(INSTALLSTATICLIBS)/libpbm.so.9
+install.lib.old-shared.devel::
+	$(SYMLINK) libpbm.so.9 $(INSTALLSTATICLIBS)/libpbm.so
+install.lib.old-static:: lib/static/libpbm.a
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpbm.a
+lib/shared/libpgm.so.9.19: lib/shared/libpbm.so
+
+lib/shared/libpgm.so.9.19:
+	$(LD) $(LDSHLIB) -Llib/shared -o $@ $+ -lpbm -lc $(CDEBUG)
+
+lib/shared/libpgm.so.9.19: SONAME := libpgm.so.9
+lib/shared/libpgm.so.9: lib/shared/libpgm.so.9.19
+	ln -sf $$(basename $+) $@
+
+lib/shared/libpgm.so: lib/shared/libpgm.so.9
+	ln -sf $$(basename $+) $@
+
+install.lib.old-shared.lib:: lib/shared/libpgm.so.9.19
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpgm.so.9.19
+install.lib.old-shared.lib::
+	$(SYMLINK) libpgm.so.9.19 $(INSTALLSTATICLIBS)/libpgm.so.9
+install.lib.old-shared.devel::
+	$(SYMLINK) libpgm.so.9 $(INSTALLSTATICLIBS)/libpgm.so
+install.lib.old-static:: lib/static/libpgm.a
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpgm.a
+lib/shared/libpnm.so.9.25: lib/shared/libppm.so
+
+lib/shared/libpnm.so.9.25:
+	$(LD) $(LDSHLIB) -Llib/shared -o $@ $+ -lppm -lpgm -lpbm -lc $(CDEBUG)
+
+lib/shared/libpnm.so.9.25: SONAME := libpnm.so.9
+lib/shared/libpnm.so.9: lib/shared/libpnm.so.9.25
+	ln -sf $$(basename $+) $@
+
+lib/shared/libpnm.so: lib/shared/libpnm.so.9
+	ln -sf $$(basename $+) $@
+
+install.lib.old-shared.lib:: lib/shared/libpnm.so.9.25
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpnm.so.9.25
+install.lib.old-shared.lib::
+	$(SYMLINK) libpnm.so.9.25 $(INSTALLSTATICLIBS)/libpnm.so.9
+install.lib.old-shared.devel::
+	$(SYMLINK) libpnm.so.9 $(INSTALLSTATICLIBS)/libpnm.so
+install.lib.old-static:: lib/static/libpnm.a
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libpnm.a
+lib/shared/libnetpbm.so.10.0: SONAME := libnetpbm.so.10
+lib/shared/libnetpbm.so.10.0:
+	$(LD) $(LDSHLIB) -o $@ $+ -lc $(CDEBUG)
+
+lib/shared/libnetpbm.so.10: lib/shared/libnetpbm.so.10.0
+	ln -sf $$(basename $+) $@
+
+lib/shared/libnetpbm.so: lib/shared/libnetpbm.so.10
+	ln -sf $$(basename $+) $@
+
+install.lib.shared.lib:: lib/shared/libnetpbm.so.10.0
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libnetpbm.so.10.0
+install.lib.shared.lib::
+	$(SYMLINK) libnetpbm.so.10.0 $(INSTALLSTATICLIBS)/libnetpbm.so.10
+install.lib.shared.devel::
+	$(SYMLINK) libnetpbm.so.10 $(INSTALLSTATICLIBS)/libnetpbm.so
+install.lib.static:: lib/static/libnetpbm.a
+	$(INSTALL) -c -m $(INSTALL_PERM_LIBS) $< $(INSTALLSTATICLIBS)/libnetpbm.a

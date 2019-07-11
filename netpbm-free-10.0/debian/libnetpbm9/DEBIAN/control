@@ -1,0 +1,14 @@
+Package: libnetpbm9
+Source: netpbm-free
+Version: 2:10.0-15.3
+Architecture: amd64
+Maintainer: Andreas Barth <aba@not.so.argh.org>
+Installed-Size: 251
+Depends: libc6 (>= 2.7)
+Section: libs
+Priority: optional
+Homepage: http://netpbm.alioth.debian.org
+Description: Shared libraries for netpbm (v9)
+ This package contains shared libraries used to be used by netpbm.
+ Now we've switched to a single shared library, look out for libnetpbm10.
+ This package is provided for backward compatibility.

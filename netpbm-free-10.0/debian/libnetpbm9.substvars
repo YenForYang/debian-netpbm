@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.7), libnetpbm9
+misc:Depends=
+misc:Pre-Depends=
